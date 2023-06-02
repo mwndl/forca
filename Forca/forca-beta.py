@@ -5,21 +5,22 @@ import random
 # Dicionário com as palavras e temas para cada dificuldade
 palavras = {
     "fácil": {
-        "animais": ["gato", "cachorro", "elefante", "leão", "tigre"],
-        "frutas": ["maçã", "banana", "laranja", "uva", "morango"],
-        "cores": ["azul", "vermelho", "verde", "amarelo", "roxo"]
+        "animais": ["gato", "cachorro", "elefante", "leão", "tigre", "girafa", "rato", "coelho", "macaco", "pássaro", "calopsita", "papagaio", "tamanduá"],
+        "frutas": ["maçã", "banana", "laranja", "uva", "morango", "abacaxi", "manga", "limão", "melancia", "pera"],
+        "cores": ["azul", "vermelho", "verde", "amarelo", "roxo", "laranja", "rosa", "preto", "branco", "marrom"]
     },
     "médio": {
-        "países": ["brasil", "canadá", "japão", "alemanha", "méxico"],
-        "carros": ["ferrari", "mercedes", "bmw", "audi", "lamborghini"],
-        "filmes": ["avatar", "titanic", "vingadores", "matrix", "senhor dos anéis"]
+        "países": ["brasil", "canadá", "japão", "alemanha", "méxico", "itália", "austrália", "egito", "suíça", "argentina"],
+        "carros": ["ferrari", "mercedes", "bmw", "audi", "lamborghini", "porsche", "volkswagen", "ford", "chevrolet", "honda"],
+        "filmes": ["avatar", "titanic", "vingadores", "matrix", "senhor dos anéis", "pantera negra", "parasita", "tropa de elite", "o poderoso chefão"]
     },
     "difícil": {
-        "capitais": ["londres", "paris", "roma", "berlim", "tokyo"],
-        "instrumentos": ["violino", "piano", "guitarra", "trompete", "flauta"],
-        "profissões": ["médico", "advogado", "engenheiro", "professor", "dentista"]
+        "capitais": ["londres", "paris", "roma", "berlim", "tokyo", "pequim", "moscou", "nova deli", "cairo", "ottawa"],
+        "instrumentos": ["violino", "piano", "guitarra", "trompete", "flauta", "bateria", "saxofone", "violoncelo", "harmônica", "trombone"],
+        "profissões": ["médico", "advogado", "engenheiro", "professor", "dentista", "arquiteto", "psicólogo", "veterinário", "jornalista", "programador"]
     }
 }
+
 
 # Dicionário com as pontuações por palavra para cada dificuldade
 pontuacoes = {
@@ -27,6 +28,38 @@ pontuacoes = {
     "médio": 10,
     "difícil": 15,
 }
+
+# Função para exibir a tela de loading
+def exibir_tela_loading():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    time.sleep(1.5)
+    print("//......JJJJ....OOOOOOO........GGGGGGG......OOOOOOO..........DDDDDDDDD.......AAAAA..........FFFFFFFFFF...OOOOOOO.....RRRRRRRRRR.....CCCCCCC.......AAAAA......")
+    time.sleep(0.5)
+    print("//......JJJJ...OOOOOOOOOO....GGGGGGGGGG....OOOOOOOOOO........DDDDDDDDDD......AAAAA..........FFFFFFFFFF..OOOOOOOOOO...RRRRRRRRRRR...CCCCCCCCC......AAAAA......")
+    time.sleep(0.5)
+    print("//......JJJJ..OOOOOOOOOOOO..GGGGGGGGGGGG..OOOOOOOOOOOO.......DDDDDDDDDDD....AAAAAA..........FFFFFFFFFF.OOOOOOOOOOOO..RRRRRRRRRRR..CCCCCCCCCCC....AAAAAA......")
+    time.sleep(0.5)
+    print("//......JJJJ..OOOOO..OOOOO..GGGGG..GGGGG..OOOOO..OOOOO.......DDDD...DDDD....AAAAAAA.........FFFF.......OOOOO..OOOOO..RRRR...RRRRR.CCCC...CCCCC...AAAAAAA.....")
+    time.sleep(0.5)
+    print("//......JJJJ.JOOOO....OOOOOOGGGG....GGG..GOOOO....OOOOO......DDDD....DDDD..AAAAAAAA.........FFFF......FOOOO....OOOOO.RRRR...RRRRRRCCC.....CCC...AAAAAAAA.....")
+    time.sleep(0.5)
+    print("//......JJJJ.JOOO......OOOOOGGG..........GOOO......OOOO......DDDD....DDDD..AAAAAAAA.........FFFFFFFFF.FOOO......OOOO.RRRRRRRRRRR.RCCC...........AAAAAAAA.....")
+    time.sleep(0.5)
+    print("//......JJJJ.JOOO......OOOOOGGG..GGGGGGGGGOOO......OOOO......DDDD....DDDD..AAAA.AAAA........FFFFFFFFF.FOOO......OOOO.RRRRRRRRRRR.RCCC...........AAAA.AAAA....")
+    time.sleep(0.5)
+    print("//......JJJJ.JOOO......OOOOOGGG..GGGGGGGGGOOO......OOOO......DDDD....DDDD.AAAAAAAAAA........FFFFFFFFF.FOOO......OOOO.RRRRRRRR....RCCC..........AAAAAAAAAA....")
+    time.sleep(0.5)
+    print("//.JJJJ.JJJJ.JOOOO....OOOOOOGGGG.GGGGGGGGGOOOO....OOOOO......DDDD....DDDD.AAAAAAAAAAA.......FFFF......FOOOO....OOOOO.RRRR.RRRR...RCCC.....CCC..AAAAAAAAAAA...")
+    time.sleep(0.5)
+    print("//.JJJJ.JJJJ..OOOOO..OOOOO..GGGGG....GGGG.OOOOO..OOOOO.......DDDD...DDDDD.AAAAAAAAAAA.......FFFF.......OOOOO..OOOOO..RRRR..RRRR...CCCC...CCCCC.AAAAAAAAAAA...")
+    time.sleep(0.5)
+    print("//.JJJJJJJJJ..OOOOOOOOOOOO..GGGGGGGGGGGG..OOOOOOOOOOOO.......DDDDDDDDDDD.DAAA....AAAA.......FFFF.......OOOOOOOOOOOO..RRRR..RRRRR..CCCCCCCCCCC.CAAA....AAAA...")
+    time.sleep(0.5)
+    print("//.JJJJJJJJ....OOOOOOOOOO....GGGGGGGGGG....OOOOOOOOOO........DDDDDDDDDD..DAAA.....AAAA......FFFF........OOOOOOOOOO...RRRR...RRRRR..CCCCCCCCCC.CAAA.....AAAA..")
+    time.sleep(0.5)
+    print("//..JJJJJJ.......OOOOOO........GGGGGGG.......OOOOOO..........DDDDDDDDD..DDAAA.....AAAA......FFFF..........OOOOOO.....RRRR....RRRR...CCCCCCC..CCAAA.....AAAA..")
+    time.sleep(2.5)
+    exibir_tela_inicial()
 
 # Função para exibir a tela inicial
 def exibir_tela_inicial():
@@ -55,9 +88,8 @@ def exibir_creditos():
     print("Créditos:")
     print()
     print("Desenvolvido por: Marcos Wiendl")
-    print("Github: URL")
-    print("Linkedin: URL")
-    print("Data: [Data Atual]")
+    print("Tecnologia utilizada: Python")
+    print("Versão: 1.0.3")
     input("\nPressione qualquer tecla para voltar para a tela inicial.")
 
 # Função para exibir o ranking
@@ -177,10 +209,27 @@ def jogar_forca():
     letras_corretas = []
     letras_incorretas = []
 
-    print("Bem-vindo ao jogo da Forca!")
+    os.system('cls' if os.name == 'nt' else 'clear')
+    time.sleep(1.5)
+    print("//......JJJJ....OOOOOOO........GGGGGGG......OOOOOOO..........DDDDDDDDD.......AAAAA..........FFFFFFFFFF...OOOOOOO.....RRRRRRRRRR.....CCCCCCC.......AAAAA......")
+    print("//......JJJJ...OOOOOOOOOO....GGGGGGGGGG....OOOOOOOOOO........DDDDDDDDDD......AAAAA..........FFFFFFFFFF..OOOOOOOOOO...RRRRRRRRRRR...CCCCCCCCC......AAAAA......")
+    print("//......JJJJ..OOOOOOOOOOOO..GGGGGGGGGGGG..OOOOOOOOOOOO.......DDDDDDDDDDD....AAAAAA..........FFFFFFFFFF.OOOOOOOOOOOO..RRRRRRRRRRR..CCCCCCCCCCC....AAAAAA......")
+    print("//......JJJJ..OOOOO..OOOOO..GGGGG..GGGGG..OOOOO..OOOOO.......DDDD...DDDD....AAAAAAA.........FFFF.......OOOOO..OOOOO..RRRR...RRRRR.CCCC...CCCCC...AAAAAAA.....")
+    time.sleep(1.5)
+    print("//......JJJJ.JOOOO....OOOOOOGGGG....GGG..GOOOO....OOOOO......DDDD....DDDD..AAAAAAAA.........FFFF......FOOOO....OOOOO.RRRR...RRRRRRCCC.....CCC...AAAAAAAA.....")
+    print("//......JJJJ.JOOO......OOOOOGGG..........GOOO......OOOO......DDDD....DDDD..AAAAAAAA.........FFFFFFFFF.FOOO......OOOO.RRRRRRRRRRR.RCCC...........AAAAAAAA.....")
+    print("//......JJJJ.JOOO......OOOOOGGG..GGGGGGGGGOOO......OOOO......DDDD....DDDD..AAAA.AAAA........FFFFFFFFF.FOOO......OOOO.RRRRRRRRRRR.RCCC...........AAAA.AAAA....")
+    print("//......JJJJ.JOOO......OOOOOGGG..GGGGGGGGGOOO......OOOO......DDDD....DDDD.AAAAAAAAAA........FFFFFFFFF.FOOO......OOOO.RRRRRRRR....RCCC..........AAAAAAAAAA....")
+    print("//.JJJJ.JJJJ.JOOOO....OOOOOOGGGG.GGGGGGGGGOOOO....OOOOO......DDDD....DDDD.AAAAAAAAAAA.......FFFF......FOOOO....OOOOO.RRRR.RRRR...RCCC.....CCC..AAAAAAAAAAA...")
+    time.sleep(1.5)
+    print("//.JJJJ.JJJJ..OOOOO..OOOOO..GGGGG....GGGG.OOOOO..OOOOO.......DDDD...DDDDD.AAAAAAAAAAA.......FFFF.......OOOOO..OOOOO..RRRR..RRRR...CCCC...CCCCC.AAAAAAAAAAA...")
+    print("//.JJJJJJJJJ..OOOOOOOOOOOO..GGGGGGGGGGGG..OOOOOOOOOOOO.......DDDDDDDDDDD.DAAA....AAAA.......FFFF.......OOOOOOOOOOOO..RRRR..RRRRR..CCCCCCCCCCC.CAAA....AAAA...")
+    print("//.JJJJJJJJ....OOOOOOOOOO....GGGGGGGGGG....OOOOOOOOOO........DDDDDDDDDD..DAAA.....AAAA......FFFF........OOOOOOOOOO...RRRR...RRRRR..CCCCCCCCCC.CAAA.....AAAA..")
+    print("//..JJJJJJ.......OOOOOO........GGGGGGG.......OOOOOO..........DDDDDDDDD..DDAAA.....AAAA......FFFF..........OOOOOO.....RRRR....RRRR...CCCCCCC..CCAAA.....AAAA..")
     time.sleep(0.5)
-    print("Iniciando partida...")
-    time.sleep(2.0)
+    print()
+    print("Carregando recursos. Aguarde alguns instantes!")
+    time.sleep(2.5)
 
     dificuldade = obter_dificuldade()
     tema = obter_tema(dificuldade)
@@ -271,7 +320,7 @@ def jogar_forca():
 
 # Loop principal do jogo
 while True:
-    exibir_tela_inicial()
+    exibir_tela_loading()
     opcao = obter_opcao()
 
     if opcao == "1":
