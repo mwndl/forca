@@ -4,21 +4,25 @@ import random
 
 # Dicionário com as palavras e temas para cada dificuldade
 palavras = {
+
     "fácil": {
-        "animais": ["gato", "cachorro", "elefante", "leão", "tigre", "girafa", "rato", "coelho", "macaco", "pássaro", "calopsita", "papagaio", "tamanduá"],
-        "frutas": ["maçã", "banana", "laranja", "uva", "morango", "abacaxi", "manga", "limão", "melancia", "pera"],
-        "cores": ["azul", "vermelho", "verde", "amarelo", "roxo", "laranja", "rosa", "preto", "branco", "marrom"]
+        "animais": ["gato", "cachorro", "elefante", "leão", "tigre", "girafa", "rato", "coelho", "macaco", "pássaro", "calopsita", "papagaio", "tamanduá", "abelha", "foca", "baleia", "camaleão", "hipopótamo", "jacaré", "largato", "flamingo", "ovelha", "tartaruga", "arara", "urso", "vaca", "veado", "zebra"],
+        "frutas": ["maçã", "banana", "laranja", "uva", "morango", "abacaxi", "manga", "limão", "melancia", "pera", "mamão", "caju", "acerola", "ameixa", "cajá", "goiaba", "kiwi", "maracujá", "melão", "tangerina"],
+        "cores": ["azul", "vermelho", "verde", "amarelo", "roxo", "laranja", "rosa", "preto", "branco", "marrom", "beje", "cinza",]
     },
+
     "médio": {
-        "países": ["brasil", "canadá", "japão", "alemanha", "méxico", "itália", "austrália", "egito", "suíça", "argentina"],
+        "países": ["brasil", "canadá", "japão", "alemanha", "méxico", "itália", "austrália", "egito", "suíça", "argentina", "bélgica", "bolívia", "chile", "colômbia", "catar", "croácia", "cuba", "dinamarca", "equador", "espanha", "frança", "grécia", "índia", "iraque", "israel", "maldivas", "marrocos", "nigéria", "paraguai", "portugal", "rússia", "vaticano"],
         "carros": ["ferrari", "mercedes", "bmw", "audi", "lamborghini", "porsche", "volkswagen", "ford", "chevrolet", "honda"],
-        "filmes": ["avatar", "titanic", "vingadores", "matrix", "senhor dos anéis", "pantera negra", "parasita", "tropa de elite", "o poderoso chefão"]
+        "filmes": ["avatar", "titanic", "vingadores", "matrix", "senhor dos anéis", "pantera negra", "parasita", "tropa de elite", "o poderoso chefão", "velozes e furiosos", "matrix", "avatar", "frozen", "toy story", "o rei leão", "harry potter"]
     },
+
     "difícil": {
         "capitais": ["londres", "paris", "roma", "berlim", "tokyo", "pequim", "moscou", "nova deli", "cairo", "ottawa"],
-        "instrumentos": ["violino", "piano", "guitarra", "trompete", "flauta", "bateria", "saxofone", "violoncelo", "harmônica", "trombone"],
-        "profissões": ["médico", "advogado", "engenheiro", "professor", "dentista", "arquiteto", "psicólogo", "veterinário", "jornalista", "programador"]
+        "instrumentos": ["violino", "piano", "guitarra", "trompete", "flauta", "bateria", "saxofone", "violoncelo", "harmônica", "trombone", "pandeiro", "sino", "triângulo", "órgão", "banjo", "harpa", "ukulele", "teclado"],
+        "profissões": ["médico", "advogado", "engenheiro", "professor", "dentista", "arquiteto", "psicólogo", "veterinário", "jornalista", "programador", "pedreiro", "bombeiro", "policial", "juiz", "enfermeiro", "farmacêutico", "vendedor", "recepcionista", "zelador"]
     }
+    
 }
 
 
@@ -89,7 +93,8 @@ def exibir_creditos():
     print()
     print("Desenvolvido por: Marcos Wiendl")
     print("Tecnologia utilizada: Python")
-    print("Versão: 1.0.3")
+    print("Bibliotecas utilizadas: Time, OS, Random")
+    print("Versão atual: 1.0.3")
     input("\nPressione qualquer tecla para voltar para a tela inicial.")
 
 # Função para exibir o ranking
